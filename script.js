@@ -56,7 +56,7 @@ function toggleClock() {
         setInterval(displayDigitalTime, 10)
         document.getElementById("btn").innerHTML = "Click me to display analog clock"
     }
-    }
+}
 
     function setAnalogClock() {
         const currentDate = new Date() //Gets current date and time
