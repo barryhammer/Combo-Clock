@@ -1,4 +1,5 @@
 setInterval(setClock, 1000) //Run every 1000 milliseconds = 1 second
+setInterval(displayDigitalTime, 1000)
 
 const hourHand = document.querySelector('[data-hour-hand]')
 const minuteHand = document.querySelector('[data-minute-hand]')
@@ -14,7 +15,8 @@ function setClock() {
     setRotation(minuteHand, minutesRatio)
     setRotation(hourHand, hoursRatio)
     // Setting digital clock to be hidden on page load
-    document.getElementById("digital-clock").style.display = "none";
+    //document.getElementById("digital-clock").style.display = "none";
+
 }
 
 function setRotation (element, rotationRatio) {
@@ -58,7 +60,7 @@ function displayDigitalTime(){
     document.getElementById('hours').innerHTML = hrs;
     document.getElementById('minutes').innerHTML = min;
     document.getElementById('seconds').innerHTML = sec;
-
+    
 }
 
 //https://stackoverflow.com/questions/10687479/javascript-replace-div-on-each-click
@@ -75,7 +77,7 @@ function toggleClock() {
         // If digital clock is not displayed, display it in place of analog clock.
         analog.style.display = "none";
         digital.style.display = "block"; 
-        setInterval(displayDigitalTime, 10)
+        setInterval(displayDigitalTime, 1000)
         document.getElementById("btn").innerHTML = "Click me to display analog clock"
     }
 }
