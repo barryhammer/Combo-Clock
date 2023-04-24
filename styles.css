@@ -21,6 +21,7 @@ body {
 }
 
 .digital-container {
+  /* display: none; */
   font-family: Arial, Helvetica, sans-serif;
   color: blue;
   font-weight: bold;
