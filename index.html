@@ -5,23 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-    <title>Combination clock</title>
+    <script defer src="script.js"></script>
+    <!-- https://www.youtube.com/watch?v=Ki0XXrlKlHY -->
+    <title>Test Clock</title>
 </head>
 <body>
-    <div class="digital-container" id ="gtl">
-        <!-- https://www.youtube.com/watch?v=lsoCv8Agg6E -->
-        <span id="hours"></span>
-        <span>:</span>
-        <span id="minutes"></span>
-        <span>:</span>
-        <!-- NOTE: Have to look up 
-        https://stackoverflow.com/questions/1267283/how-can-i-pad-a-value-with-leading-zeros 
-        for adding a padding zero if seconds is less than 10 -->
-        <span id="seconds"></span>
-        <span id="session"></span>
-    </div>
-    <div class="analog-clock" id="ang">
+    <!--<button onclick="hideAnalog()">Click Here</button>-->
+    <div class="clock" id="analog-clock">
         <div class="hand hour" data-hour-hand></div>
         <div class="hand minute" data-minute-hand></div>
         <div class="hand second" data-second-hand></div>
@@ -39,7 +29,17 @@
         <div class="number number11">11</div>
         <div class="number number12">12</div>
     </div>
-    <button class="button-3" id="btn" onclick="toggleClock()">Click me to display digital clock</button>
-
+    <div class="digital-container" id="digital-clock">
+        <span id="hours"></span>
+        <span>:</span>
+        <span id="minutes"></span>
+        <span>:</span>
+        <!-- NOTE: Have to look up 
+        https://stackoverflow.com/questions/1267283/how-can-i-pad-a-value-with-leading-zeros 
+        for adding a padding zero if seconds is less than 10 -->
+        <span id="seconds"></span>
+        <span id="session"></span>
+    </div>
+    <button type="button" class="button-3" id="btn" onclick="toggleClock()">Click me to display digital clock</button>
 </body>
 </html>
